@@ -12,15 +12,15 @@ const popupinputdiv = document.getElementById("popupinputdiv");
 const searchDiv = document.getElementById("searchDiv");
 let memberName = document.getElementById("memberName")
 let memberImg = document.getElementById("memberImg");
-
+const blogSearch = document.getElementById("blogSearch");
+const card = document.getElementsByClassName("blogDiv")
 
 
 AOS.init();
 
-let isTrue = false
+var isTrue = false;
 
 function showNav() {
-    console.log(navbaar)
     if (!isTrue) {
         navbaar.style.bottom = "20%";
         navbaar.style.top = "80px"
@@ -108,4 +108,19 @@ function getMembeInfo() {
     memberImg.style.marginBottom = "60px"
     memberImg.src = memberObject.imageUrl;
 
+}
+
+function searchBlogsFunc(){
+
+    const filter = blogSearch.value.toUpperCase();
+
+    for (i = 0; i < card.length; i++) {
+        h3 = card[i].getElementsByTagName("h3")[0];
+        txtValue = h3.textContent || h3.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          card[i].style.display = "";
+        } else {
+          card[i].style.display = "none";
+        }
+      }
 }

@@ -367,6 +367,7 @@ body {
 
 .relatedBlogh2 {
     padding-left: 15px;
+    color: #C69F37;
 }
 
 .blogCard {
@@ -385,8 +386,11 @@ body {
 }
 
 .blogPageSection h2 {
-    color: #C69F37;
+    /* color: #C69F37; */
     text-transform: capitalize;
+}
+.featureh2{
+    color: #C69F37;
 }
 
 .iconsmember {
@@ -563,6 +567,35 @@ body {
     outline: none;
     color: #fff;
 }
+select {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 2;
+}
+.dropdownField::after{
+    content: "";
+    width: 25px;
+    height: 15px;
+    background-color: #C69F37;
+    position: absolute;
+    right: 20px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    cursor: auto;
+    z-index: 1;
+}
+select option{
+    background: transparent;
+    color: #000;
+    padding: 20px;
+}
 
 .contactInput input::placeholder {
     color: #fff;
@@ -582,6 +615,7 @@ body {
     justify-content: space-between;
     padding: 0 10px;
     cursor: pointer;
+    position: relative;
 }
 
 .dropdownField h2 {
@@ -816,7 +850,7 @@ nav {
     width: 0;
     background-color: #C69F37;
     left: 0;
-    bottom: -36px;
+    bottom: -35px;
     transition: 0.3s;
 }
 
@@ -906,6 +940,7 @@ nav {
     transition: 0.6s;
     padding: 10px;
 }
+
 .membersCard a {
     text-decoration: none;
     color: #000;
