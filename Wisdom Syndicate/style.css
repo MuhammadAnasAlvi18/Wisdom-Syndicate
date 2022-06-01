@@ -11,6 +11,7 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
 }
+
 .background {
     width: 100%;
     height: 100vh;
@@ -386,10 +387,10 @@ body {
 }
 
 .blogPageSection h2 {
-    /* color: #C69F37; */
     text-transform: capitalize;
 }
-.featureh2{
+
+.featureh2 {
     color: #C69F37;
 }
 
@@ -567,6 +568,7 @@ body {
     outline: none;
     color: #fff;
 }
+
 select {
     width: 100%;
     height: 100%;
@@ -575,11 +577,12 @@ select {
     outline: none;
     color: #fff;
     -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  z-index: 2;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 2;
 }
-.dropdownField::after{
+
+.dropdownField::after {
     content: "";
     width: 25px;
     height: 15px;
@@ -591,7 +594,8 @@ select {
     cursor: auto;
     z-index: 1;
 }
-select option{
+
+select option {
     background: transparent;
     color: #000;
     padding: 20px;

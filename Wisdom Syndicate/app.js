@@ -110,7 +110,7 @@ function getMembeInfo() {
 
 }
 
-function searchBlogsFunc(){
+function searchBlogsFunc() {
 
     const filter = blogSearch.value.toUpperCase();
 
@@ -118,9 +118,9 @@ function searchBlogsFunc(){
         h3 = card[i].getElementsByTagName("h3")[0];
         txtValue = h3.textContent || h3.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          card[i].style.display = "";
+            card[i].style.display = "";
         } else {
-          card[i].style.display = "none";
+            card[i].style.display = "none";
         }
-      }
+    }
 }
