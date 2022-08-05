@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Syndicate</title>
+    <link rel="icon" href="../images/title.png" type="image/icon type">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body onload="getMembeInfo()">
+    <div class="searchDiv" id="searchDiv">
+        <div class="searchInput">
+            <input type="text" placeholder="SEARCH TOPIC">
+            <button>search</button>
+        </div>
+        <i class="bi bi-x-lg" onclick="closeSearchbar()"></i>
+    </div>
+    <div class="MembersDetailbackground">
+        <div class="MembersDetailbackgroundWrap">
+            <header>
+                <div class="side-bar" id="sidebar">
+                    <i class="bi bi-x" onclick="showNav()"></i>
+                    <div class="sidebar-main">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="fph2">Featured Posts</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="line"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="sidebar-content">
+                                    <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                    <div class="text">
+                                        <h2>GALLERY POST: DOWN THE HILL</h2>
+                                        <h3>AUGUST 14, 2017</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="line"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="sidebar-content">
+                                    <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                    <div class="text">
+                                        <h2>GALLERY POST: DOWN THE HILL</h2>
+                                        <h3>AUGUST 14, 2017</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="line"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="sidebar-content">
+                                    <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                    <div class="text">
+                                        <h2>GALLERY POST: DOWN THE HILL</h2>
+                                        <h3>AUGUST 14, 2017</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="btn-div">
+                                    <button class="sidebarbtn sidebarbtntop">learn more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="logo-div"><a href="home.html"><img src="../images/homeImages/logo.svg" class="logo"></a>
+                    </div>
+                    <div class="icons">
+                        <i class="bi bi-list" onclick="showNav()"></i>
+                        <ion-icon name="search-outline" onclick="showSearchbar()"></ion-icon>
+                    </div>
+                    <div class="navbaar" id="navbaar">
+                        <ul>
+                            <li id="li"><a href="home.html" class="navbaarAnchor">Home</a></li>
+                            <li id="li"><a href="membersList.html" class="navbaarAnchor active">Members</a></li>
+                            <li id="li"><a href="#" class="navbaarAnchor">Intiatives</a></li>
+                            <li id="li"><a href="blogs.html" class="navbaarAnchor">blog</a></li>
+                            <li id="li"><a href="#" class="navbaarAnchor">join</a></li>
+                            <li id="li"><a href="contact.html" class="navbaarAnchor">contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="memberdetailtextsection" data-aos="fade-right" data-aos-duration="1000">
+                            <h2 id="memberName">Bill Belanger</h2>
+                            <h3>Psychotherapist/Business Coach</h3>
+                            <div class="memberdetailtextsectionicons">
+                                <h4><i class="bi bi-telephone-fill bi-telephone-fill-2"></i>(617) 657-2169</h4>
+                                <h4><i class="bi bi-geo-alt-fill"></i>Quincy, MA 02169</h4>
+                            </div>
+                            <h4 id="webiteDetail"><i
+                                    class="bi bi-telephone-fill bi-telephone-fill-2"></i>www.billbelanger.com</h4>
+                            <div class="btn-div ">
+                                <button class="sidebarbtn memberDetailsBtn">email me</button>
+                            </div>
+                            <div class="iconsmember">
+                                <i class="bi bi-facebook bi-facebook-2"></i>
+                                <i class="bi bi-twitter bi-twitter-2"></i>
+                                <i class="bi bi-linkedin bi-linkedin-2"></i>
+                                <i class="bi bi-youtube bi-youtube-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="memberdetailimgsection" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="../images/members/Group 116.png" alt="" class="img-fluid" id="memberImg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="memberAbout pb-5">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="border-bottom border-light pb-5">My name is Bill and I am the CEO and co-founder of
+                Healbright.com, former psychotherapist, and current
+                business coach. My mission is to make the best practices of the mind sciences accessible to as many
+                people as possible. <br><br> ​I received my undergraduate degree in Anthropology from the University of
+                Vermont and my Master’s Degree in Counseling Psychology from Naropa University. As a therapist, I have
+                focused on Buddhist psychology, positive psychology, human development, and mind-body approaches to
+                healing. My approach is client-centered and integrates Western and Eastern approaches to healing and
+                wholeness. I have worked as an individual therapist, group therapist, and have taught various workshops
+                in professional and academic settings. As the CEO of Healbright, I collaborate with leading mental
+                health experts to produce curriculum on topics like neuroscience, parenting, meditation, sexuality,
+                PTSD, nutrition, stress, resiliency, and more. <br><br> I have also practiced and studied various forms
+                of Buddhist meditation for close to 15 years. I have studied Zen,Theravadan Buddhism, and Tibetan
+                Buddhism with various teachers in Thailand, India, Bhutan, Nepal and the U.S. Additionally, I have spent
+                6 months in meditation retreat in monastic, solitary, and secular settings. I continue to practice and
+                study Buddhist Psychology and meditation under the direction of Dr. Daniel P. Brown and Rahob Rinpoche.
+                My practice experience and studies of Asian culture help me demystify a wide variety of meditation
+                practices for my clients. My approach to coaching combines therapeutic interventions, meditation
+                instruction, and my personal experience from starting and running a business. My coaching style focuses
+                on listening and understanding the roots of my client’s struggles and takes the view that personal and
+                professional problems often stem from deeper psychological dynamics. I use an integrated model that
+                takes into account biological, psychological, social, and cultural factors of wellness.​I provide
+                coaching to a small group of individuals in addition to my work at Healbright. Outside of my
+                professional work, I am passionate about martial arts, nature, and music.</p>
+        </div>
+    </div>
+    <div class="memberDetailArticle">
+        <div class="container">
+            <h2 class="memberDetailArticleh2">Articles</h2>
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="cardDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="" class="img-fluid">
+                        <div class="card-icons">
+                            <div class="d-flex vcenter"><i class="bi bi-person-circle"></i>
+                                <h2>james</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-clock"></i>
+                                <h2>august 20,2021</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-file-earmark"></i>
+                                <h2>featured, video</h2>
+                            </div>
+                        </div>
+                        <h3 class="mDetailh3">Some moments in river night</h3>
+                        <p>When the amphitheater had cleared I crept stealthily to the top and as the great
+                            excavation lay far from the plaza</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="cardDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="../images/blog/pexels-riccardo-bertolo-4245826.png" alt="" class="img-fluid">
+                        <div class="card-icons">
+                            <div class="d-flex vcenter"><i class="bi bi-person-circle"></i>
+                                <h2>norman</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-clock"></i>
+                                <h2>august 20,2021</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-file-earmark"></i>
+                                <h2>featured, video</h2>
+                            </div>
+                        </div>
+                        <h3 class="mDetailh3">Dark Rain feelings & cloudy weather</h3>
+                        <p>When the amphitheater had cleared I crept stealthily to the top and as the great
+                            excavation lay far from the plaza</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="cardDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="../images/blog/pexels-sami-anas-5137664.png" alt="" class="img-fluid">
+                        <div class="card-icons">
+                            <div class="d-flex vcenter"><i class="bi bi-person-circle"></i>
+                                <h2>virular asy</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-clock"></i>
+                                <h2>august 20,2021</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-file-earmark"></i>
+                                <h2>featured, video</h2>
+                            </div>
+                        </div>
+                        <h3 class="mDetailh3">Silent moments with heavy rocks</h3>
+                        <p>When the amphitheater had cleared I crept stealthily to the top and as the great
+                            excavation lay far from the plaza</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="cardDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="../images/blog/pexels-francesco-ungaro-2325446.png" alt="" class="img-fluid">
+                        <div class="card-icons">
+                            <div class="d-flex vcenter"><i class="bi bi-person-circle"></i>
+                                <h2>jessy smith</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-clock"></i>
+                                <h2>august 20,2021</h2>
+                            </div>
+                            <div class="d-flex vcenter"> <i class="bi bi-file-earmark"></i>
+                                <h2>featured, video</h2>
+                            </div>
+                        </div>
+                        <h3 class="mDetailh3">Lots of air balloons on the sky</h3>
+                        <p>When the amphitheater had cleared I crept stealthily to the top and as the great
+                            excavation lay far from the plaza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="MemberService">
+        <div class="container">
+            <div class="row">
+                <h2>Services</h2>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Peak <br> Performance</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Working through unconscious beliefs and resistances to growth</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Meaning-making and finding connection with a larger purpose</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Stress <br> reduction</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Improving communication skills & emotional intelligence</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Challenging neurotic patterns</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Finding flow and joy in work</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="serviceDiv" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Personalised meditation guidance</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="memberContact">
+        <div class="container">
+            <div class="middleBackground">
+                <div class="middleBackgroundWrap">
+                    <div class="row">
+                        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                            <h2>Contact</h2>
+                            <p>Ready to get started? Schedule a free 30 minute coaching session to see if we are a
+                                good fit.</p>
+                            <div class="btn-div viewallbtn2div membercardbtn">
+                                <button class="sidebarbtn viewallbtn2 membercardbtn">shedule now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="memberVideoDiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="../images/members/Group 129.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <div class="memberVideoText" data-aos="fade-right" data-aos-duration="1000">
+                        <h2>Lorem Ipsum is simply dummy</h2>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                            Latin professor at Hampden</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="footer-div">
+                                <img src="../images/homeImages/logo.svg" alt="" class="footer-logo">
+                                <p class="footer-1-p">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry’s standard dummy</p>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="footer-div">
+                                <h2 class="footer-2-h2">quick links</h2>
+                                <ul>
+                                    <li class="footer-2-li"><a href="#">Member</a></li>
+                                    <li class="footer-2-li"><a href="#">Intiatives</a></li>
+                                    <li class="footer-2-li"><a href="#">blogs</a></li>
+                                    <li class="footer-2-li"><a href="#">join</a></li>
+                                    <li class="footer-2-li"><a href="#">contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-div footer-div-3">
+                                <h2>contact</h2>
+                                <ul>
+                                    <li class="footer-3-li">info@wisdomsyndicate.com</li>
+                                    <li class="footer-3-li">contact@wisdomsyndicate.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="footer-div">
+                                <h2 class="footer-6-h2">get social with us</h2>
+                                <ul class="footer-4-ul">
+                                    <li class="footer-4-li"><i class="bi bi-facebook"></i></li>
+                                    <li class="footer-4-li"><i class="bi bi-instagram"></i></li>
+                                    <li class="footer-4-li"><i class="bi bi-youtube"></i></li>
+                                    <li class="footer-4-li"><i class="bi bi-linkedin"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-div">
+                                <h2>subscribe</h2>
+                                <ul class="footer-5-ul">
+                                    <li class="footer-5-li">Sign up to our newsletter.</li>
+                                    <li class="footer-5-li">
+                                        <div class="footer-input"><input type="text"><button>subscribe</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-last">
+                <h2>© 2021 WISDOM SYNDICATE. Trademarks and brands are the property of their respective owners.</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../app.js"></script>
+</body>
+
+</html>

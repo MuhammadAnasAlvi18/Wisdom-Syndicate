@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Syndicate</title>
+    <link rel="icon" href="../images/title.png" type="image/icon type">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="searchDiv" id="searchDiv">
+        <div class="searchInput">
+            <input type="text" placeholder="SEARCH TOPIC">
+            <button>search</button>
+        </div>
+        <i class="bi bi-x-lg" onclick="closeSearchbar()"></i>
+    </div>
+    <div class="Membersbackground">
+        <header>
+            <div class="side-bar" id="sidebar">
+                <i class="bi bi-x" onclick="showNav()"></i>
+                <div class="sidebar-main">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="fph2">Featured Posts</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="line"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="sidebar-content">
+                                <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                <div class="text">
+                                    <h2>GALLERY POST: DOWN THE HILL</h2>
+                                    <h3>AUGUST 14, 2017</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="line"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="sidebar-content">
+                                <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                <div class="text">
+                                    <h2>GALLERY POST: DOWN THE HILL</h2>
+                                    <h3>AUGUST 14, 2017</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="line"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="sidebar-content">
+                                <img src="../images/blog/pexels-ezra-comeau-2387418.png" alt="">
+                                <div class="text">
+                                    <h2>GALLERY POST: DOWN THE HILL</h2>
+                                    <h3>AUGUST 14, 2017</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="btn-div">
+                                <button class="sidebarbtn sidebarbtntop">learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="logo-div"><a href="home.html"><img src="../images/homeImages/logo.svg" class="logo"></a>
+                </div>
+                <div class="icons">
+                    <i class="bi bi-list" onclick="showNav()"></i>
+                    <ion-icon name="search-outline" onclick="showSearchbar()"></ion-icon>
+                </div>
+                <div class="navbaar" id="navbaar">
+                    <ul>
+                        <li id="li"><a href="home.html" class="navbaarAnchor">Home</a></li>
+                        <li id="li"><a href="membersList.html" class="navbaarAnchor active">Members</a></li>
+                        <li id="li"><a href="#" class="navbaarAnchor">Intiatives</a></li>
+                        <li id="li"><a href="blogs.html" class="navbaarAnchor">blog</a></li>
+                        <li id="li"><a href="#" class="navbaarAnchor">join</a></li>
+                        <li id="li"><a href="contact.html" class="navbaarAnchor">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="memberCardSection">
+            <div class="container">
+                <h2>Members</h2>
+                <h3 class="membersCount">Total: 100</h3>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+
+                            <img src="../images/homeImages/Rectangle 30.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/homeImages/Rectangle 30-1.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/homeImages/Rectangle 30-2.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/homeImages/Rectangle 30-3.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-1.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-2.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-3.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-4.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-5.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-6.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-7.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-8.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-9.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-10.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-11.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-12.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-13.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-14.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-15.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-16.png" alt="" class="img-fluid">
+                            <h3>Christopher Curtis</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-17.png" alt="" class="img-fluid">
+                            <h3>Bruce banner</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <img src="../images/members/Rectangle 30-18.png" alt="" class="img-fluid">
+                            <h3>jenny hardy</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="membersCard" onclick="getMember(this)" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <img src="../images/members/Rectangle 30-19.png" alt="" class="img-fluid">
+                            <h3>christine</h3>
+                            <h4>Author</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-div viewallbtn2div membercardbtn">
+                <button class="sidebarbtn viewallbtn2 membercardbtn">view more</button>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-section">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="footer-div">
+                                    <img src="../images/homeImages/logo.svg" alt="" class="footer-logo">
+                                    <p class="footer-1-p">Lorem Ipsum is simply dummy text of the printing and
+                                        typesetting industry. Lorem Ipsum has been the industry’s standard dummy</p>
+                                </div>
+                            </div>
+                            <div class="col-md-1">
+                                <div class="footer-div">
+                                    <h2 class="footer-2-h2">quick links</h2>
+                                    <ul>
+                                        <li class="footer-2-li"><a href="#">Member</a></li>
+                                        <li class="footer-2-li"><a href="#">Intiatives</a></li>
+                                        <li class="footer-2-li"><a href="#">blogs</a></li>
+                                        <li class="footer-2-li"><a href="#">join</a></li>
+                                        <li class="footer-2-li"><a href="#">contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footer-div footer-div-3">
+                                    <h2>contact</h2>
+                                    <ul>
+                                        <li class="footer-3-li">info@wisdomsyndicate.com</li>
+                                        <li class="footer-3-li">contact@wisdomsyndicate.com</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="footer-div">
+                                    <h2 class="footer-4-h2">get social with us</h2>
+                                    <ul class="footer-4-ul">
+                                        <li class="footer-4-li"><i class="bi bi-facebook"></i></li>
+                                        <li class="footer-4-li"><i class="bi bi-instagram"></i></li>
+                                        <li class="footer-4-li"><i class="bi bi-youtube"></i></li>
+                                        <li class="footer-4-li"><i class="bi bi-linkedin"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="footer-div">
+                                    <h2>subscribe</h2>
+                                    <ul class="footer-5-ul">
+                                        <li class="footer-5-li">Sign up to our newsletter.</li>
+                                        <li class="footer-5-li">
+                                            <div class="footer-input"><input type="text"><button>subscribe</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-last">
+                    <h2>© 2021 WISDOM SYNDICATE. Trademarks and brands are the property of their respective owners.</h2>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="../app.js"></script>
+</body>
+
+</html>
