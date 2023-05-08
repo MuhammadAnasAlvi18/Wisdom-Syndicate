@@ -668,11 +668,37 @@ header {
 
 .side-bar {
     width: 0;
-    height: 110vh;
+    height: 100vh;
     background-color: #0E3247;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     transition: width 0.7s;
     z-index: 99999;
+}
+
+.side-bar-overlay{
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(14, 50, 71, 0.5);
+    z-index: 10;
+    transition: width 0.8s;
+}
+
+.side-bar-overlay.active{
+    width: 100%;
+}
+
+body.popup-active .side-bar{
+    width: 0 !important;
+}
+
+body.popup-active .side-bar-overlay{
+    width: 0 !important;
 }
 
 .sidebar-main {
@@ -1000,9 +1026,13 @@ nav {
 .membersCount {
     font-size: 22px;
     color: #fff;
-    position: absolute;
-    top: 170px;
-    right: 120px;
+}
+
+.memberCardSectionTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .viewallbtn {
@@ -1020,14 +1050,20 @@ nav {
 }
 
 .cardDiv {
-    margin: 10px;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.cardDiv img{
+    width: 100%;
 }
 
 .secheading {
     color: #C69F37;
-    padding-top: 40px;
+    padding: 40px 0 30px;
 }
 
 .cardimgdiv {
@@ -1068,7 +1104,6 @@ nav {
 }
 
 .cardDiv h3 {
-    width: 90%;
     font-size: 30px;
     padding-bottom: 25px;
     border-bottom: 1px solid rgb(192, 191, 191);
@@ -1209,18 +1244,19 @@ nav {
 }
 
 .pop-up {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     background-color: #ffffff;
     z-index: 99999;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    pointer-events: all !important;
 }
 
 .popupclose {
@@ -1278,7 +1314,7 @@ nav {
 }
 
 .searchDiv {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     background-color: #0E3247;
@@ -1526,8 +1562,10 @@ nav {
     .section {
         padding: 20px 10px;
     }
-
-    .membersCount {
+    .side-bar,.side-bar-overlay{
+        display: none !important;
+    }
+    .hide-on-mobile{
         display: none;
     }
 }

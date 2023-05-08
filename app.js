@@ -13,8 +13,8 @@ const searchDiv = document.getElementById("searchDiv");
 let memberName = document.getElementById("memberName")
 let memberImg = document.getElementById("memberImg");
 const blogSearch = document.getElementById("blogSearch");
-const card = document.getElementsByClassName("blogDiv")
-
+const card = document.getElementsByClassName("blogDiv");
+const sidebaroverlay = document.querySelectorAll(".side-bar-overlay");
 
 AOS.init();
 
@@ -25,7 +25,10 @@ function showNav() {
         navbaar.style.bottom = "20%";
         navbaar.style.top = "80px"
         isTrue = true;
-        sidebar.style.width = "378px"
+        sidebar.style.width = "429px";
+        sidebaroverlay.forEach((items)=>{
+            items.classList.add("active");
+        })
     }
     else if (isTrue === true) {
         navbaar.style.bottom = "100%"
@@ -33,6 +36,9 @@ function showNav() {
         navbaar.style.left = '0'
         isTrue = false;
         sidebar.style.width = "0"
+        sidebaroverlay.forEach((items)=>{
+            items.classList.remove("active");
+        })
     }
 
 }
@@ -56,6 +62,7 @@ function closeSearchbar() {
 function hidePopup() {
     popup.style.width = "0";
     popup.style.height = "0";
+    popup.style.display = 'none';
     background.style.filter = "brightness(100%)";
     searchDiv.style.filter = "brightness(100%)";
     membersection.style.background = "#fff";
@@ -65,6 +72,8 @@ function hidePopup() {
     popuph2.style.opacity = "0";
     popupp.style.opacity = "0";
     popupinputdiv.style.display = "none";
+    document.body.style.pointerEvents = 'all';
+    document.body.classList.remove("popup-active");
 }
 
 
@@ -73,6 +82,7 @@ function showPopup() {
     setTimeout(() => {
         popup.style.width = "50%";
         popup.style.height = "408px";
+        popup.style.display = 'flex';
         background.style.filter = "brightness(30%)";
         searchDiv.style.filter = "brightness(30%)";
         membersection.style.background = "rgba(0,0,0,0.3)";
@@ -82,7 +92,9 @@ function showPopup() {
         popuph2.style.opacity = "1";
         popupp.style.opacity = "1";
         popupinputdiv.style.display = "block";
-    }, 15000)
+        document.body.style.pointerEvents = 'none';
+        document.body.classList.add("popup-active");
+    }, 10000)
 
 }
 
