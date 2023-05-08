@@ -25,7 +25,7 @@ function showNav() {
         navbaar.style.bottom = "20%";
         navbaar.style.top = "80px"
         isTrue = true;
-        sidebar.style.width = "429px";
+        sidebar.style.left = "0";
         sidebaroverlay.forEach((items)=>{
             items.classList.add("active");
         })
@@ -35,7 +35,7 @@ function showNav() {
         navbaar.style.top = "-100%"
         navbaar.style.left = '0'
         isTrue = false;
-        sidebar.style.width = "0"
+        sidebar.style.left = "-100%"
         sidebaroverlay.forEach((items)=>{
             items.classList.remove("active");
         })
@@ -51,7 +51,7 @@ function showSearchbar() {
     navbaar.style.top = "-100%"
     navbaar.style.left = '0'
     isTrue = false;
-    sidebar.style.width = "0"
+    sidebar.style.left = "-100%"
 
 }
 
@@ -83,8 +83,8 @@ function showPopup() {
         popup.style.width = "50%";
         popup.style.height = "408px";
         popup.style.display = 'flex';
-        background.style.filter = "brightness(30%)";
-        searchDiv.style.filter = "brightness(30%)";
+        background.style.filter = "brightness(50%)";
+        searchDiv.style.filter = "brightness(50%)";
         membersection.style.background = "rgba(0,0,0,0.3)";
         popupclose.style.width = "60px";
         popupclose.style.height = "60px";

@@ -667,14 +667,15 @@ header {
 }
 
 .side-bar {
-    width: 0;
+    width: 429px;
     height: 100vh;
     background-color: #0E3247;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     bottom: 0;
-    transition: width 0.7s;
+    overflow: hidden;
+    transition: left 0.8s;
     z-index: 99999;
 }
 
@@ -1363,7 +1364,14 @@ nav {
     cursor: pointer;
 }
 
-@media (max-width:1355px) {}
+@media (max-width:1366px) and (min-width:1279px) {
+    .card-icons{
+        flex-wrap: nowrap;
+    }
+    .cardDiv h3{
+        font-size: 18px;
+    }
+}
 
 @media (max-width:1247px) {
     .bi-clock {
